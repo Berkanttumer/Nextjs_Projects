@@ -70,6 +70,11 @@ const MobileMenu = () => {
             </SheetContent>
           </Sheet>
         </SignedIn>
+        <SignedOut>
+          <Button asChild>
+            <Link href="/sign-in">Sign In</Link>
+          </Button>
+        </SignedOut>
       </nav>
     </header>
   );
