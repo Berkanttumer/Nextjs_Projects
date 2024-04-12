@@ -18,7 +18,12 @@ const Navbar: React.FC = () => {
     <div className="bg-secondaryText shadow-lg text-lightText">
       <div className="container py-3">
         <div className="navbar-links flex items-center justify-between">
-          <div className="font-pacifico text-3xl flex gap-3 items-center font-bold">
+          <div
+            className="font-pacifico text-3xl flex gap-3 items-center font-bold"
+            data-aos="fade-down"
+            data-aos-once="true"
+            data-aos-delay="200"
+          >
             <Image src="/favicon.ico" alt="logo" width={50} height={50} />
             <Link href="/">Coffe</Link>
           </div>
@@ -49,7 +54,12 @@ const Navbar: React.FC = () => {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="menu-list hidden lg:flex">
+          <div
+            className="menu-list hidden lg:flex"
+            data-aos="fade-down"
+            data-aos-once="true"
+            data-aos-delay="300"
+          >
             <ul className="flex gap-8 text-xl">
               {Menu.map((item) => {
                 return (
@@ -60,7 +70,7 @@ const Navbar: React.FC = () => {
               })}
             </ul>
           </div>
-          <div>
+          <div data-aos="fade-down" data-aos-once="true" data-aos-delay="400">
             <OrderButton
               icon={FaCoffee}
               label="Order"
