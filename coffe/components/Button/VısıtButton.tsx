@@ -13,7 +13,7 @@ const VısıtButton: React.FC<VısıtButtonProps> = ({
   label,
 }) => {
   return (
-    <button className="bg-brandDark p-4 px-6 rounded-full flex gap-4 items-center hover:scale-105 transition duration-700">
+    <button className="bg-primaryText p-4 px-6 rounded-full flex gap-4 items-center hover:scale-105 transition duration-700">
       {label}
       {<Icon />}
     </button>

@@ -19,7 +19,7 @@ const Hero = () => {
           className="mySwiper"
         >
           {HeroList.map((item, idx) => (
-            <SwiperSlide>
+            <SwiperSlide key={idx}>
               <HeroItem
                 label1={item.label1}
                 label2={item.label2}

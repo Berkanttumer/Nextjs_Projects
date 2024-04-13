@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import VısıtButton from "../Button/VısıtButton";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 interface HeroItemProps {
   label1: string;
@@ -29,13 +30,13 @@ const HeroItem: React.FC<HeroItemProps> = ({
             </span>{" "}
             {label3}
           </h1>
-          <div>
-            <VısıtButton />
+          <div className="flex justify-center mt-5">
+            <VısıtButton icon={MdOutlineKeyboardArrowRight} label="VISIT" />
           </div>
         </div>
       </div>
       <div className="min-h-[450px] flex justify-center">
-        <Image src={src} alt="logo" height={420} width={420}></Image>
+        <Image src={src} alt="logo" height={420} width={420} className="spin" />
       </div>
     </div>
   );
