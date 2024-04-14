@@ -20,7 +20,7 @@ const ServicesItem: React.FC<ServicesItemProps> = ({
     <div
       className="max-w-[310px] bg-white shadow-lg p-6 rounded-lg flex flex-col justify-center hover:bg-lightText max-h-[300px] pb-20 hover:text-red-600"
       data-aos="fade-down"
-      data-aos-once="true"
+      data-aos-once="false"
       data-aos-delay={aosDelay}
     >
       <div className="flex justify-center ">

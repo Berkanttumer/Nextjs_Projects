@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -93,6 +97,22 @@
 
 .spin {
   animation: spin 40s linear infinite;
+}
+
+@keyframes spin2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(90px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.spin2 {
+  animation: spin2 7s linear infinite;
 }
 
 .swiper-pagination-bullet-active {

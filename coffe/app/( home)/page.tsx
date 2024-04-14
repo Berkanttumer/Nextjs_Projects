@@ -1,7 +1,10 @@
 "use client";
+import Banner from "@/components/Banner/Banner";
+import BannerMobile from "@/components/Banner/BannerMobile";
 import Hero from "@/components/Hero/Hero";
 import Navbar from "@/components/Navbar/Navbar";
 import Services from "@/components/Services/Services";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -21,6 +24,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Banner />
+      <BannerMobile />
+      <Testimonials />
     </div>
   );
 }
