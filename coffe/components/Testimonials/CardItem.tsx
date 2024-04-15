@@ -19,8 +19,8 @@ const CardItem: React.FC<CardItemProps> = ({
   return (
     <div>
       <div
-        //data-aos="fade-up"
-        //data-aos-delay={aosDelay}
+        data-aos="fade-up"
+        data-aos-delay={aosDelay}
         className="bg-primaryText rounded-lg  p-6 max-h-[400px] w-56 text-white"
       >
         <Image

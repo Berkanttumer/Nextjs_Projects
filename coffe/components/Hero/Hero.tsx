@@ -7,14 +7,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import dynamic from "next/dynamic";
-
 const Hero = () => {
   return (
     <div className="min-h-[600px] bg-brandDark flex items-center justify-center text-lightText">
       <div className="container ">
         <Swiper
-          pagination={{ dynamicBullets: true }}
+          pagination={{ clickable: true, dynamicBullets: true }}
           modules={[Pagination]}
           className="mySwiper"
         >
