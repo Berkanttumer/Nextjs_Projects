@@ -15,7 +15,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mt-20">
+        <div className="grid grid-cols-2 items-center md:grid-cols-2 lg:grid-cols-4 gap-16 mt-20">
           {ServicesList.map((item) => (
             <ServicesItem
               aosDelay={item.aosDelay}

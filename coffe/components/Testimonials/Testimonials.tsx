@@ -14,14 +14,14 @@ const Testimonials = () => {
           <h1 className="text-center text-5xl font-sriracha font-bold mt-12">
             Testimonials
           </h1>
-          <div className="   flex mt-4 justify-center ">
+          <div className="flex mt-4 justify-center ">
             <div className="h-1 w-full max-w-xl bg-gradient-to-r opacity-50 from-primaryText to-secondaryText rounded-full"></div>
           </div>
         </div>
-        <div className=" flex gap-9 mt-12 justify-center">
+        <div className="flex gap-12 mt-12  ">
           <Swiper
-            slidesPerView={1}
-            spaceBetween={10}
+            slidesPerView={2}
+            spaceBetween={20}
             pagination={{
               clickable: true,
             }}
@@ -35,12 +35,16 @@ const Testimonials = () => {
                 spaceBetween: 30,
               },
               1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1280: {
                 slidesPerView: 5,
                 spaceBetween: 40,
               },
             }}
             modules={[Pagination]}
-            className="mySwiper"
+            className="mySwiper flex gap-32"
           >
             {UserLists.map((item) => (
               <SwiperSlide key={item.id}>

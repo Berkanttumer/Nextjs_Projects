@@ -21,14 +21,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Navbar />
+    <div className="app">
       <Hero />
       <Services />
       <Banner />
       <BannerMobile />
       <Testimonials />
-      <Footer />
     </div>
   );
 }

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import OrderButton from "../Button/OrderButton";
 import { FaCoffee } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar: React.FC = () => {
   return (
@@ -70,7 +71,16 @@ const Navbar: React.FC = () => {
               })}
             </ul>
           </div>
-          <div data-aos="fade-down" data-aos-once="true" data-aos-delay="400">
+
+          <div
+            data-aos="fade-down"
+            data-aos-once="true"
+            data-aos-delay="400"
+            className="flex justify-center items-center gap-5 "
+          >
+            <Link href="/account">
+              <CgProfile className="text-2xl" />
+            </Link>
             <OrderButton
               icon={FaCoffee}
               label="Order"

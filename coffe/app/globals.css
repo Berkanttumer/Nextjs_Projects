@@ -7,6 +7,15 @@ body {
   overflow-x: hidden;
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -93,9 +102,6 @@ body {
   }
   .footer-wrapper a {
     @apply text-sm text-gray-400;
-  }
-  .social-links .fa {
-    display: none;
   }
 }
 
