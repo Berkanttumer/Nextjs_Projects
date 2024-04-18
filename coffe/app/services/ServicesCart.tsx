@@ -16,9 +16,9 @@ const ServicesCart: React.FC<ServicesCartProps> = ({
   aosDelay,
 }) => {
   return (
-    <Link href="#">
+    <Link href="#" className="hover:scale-105 transition duration-700">
       <div
-        className="p-6 bg-secondaryText text-white rounded-xl"
+        className="p-6 bg-secondaryText text-white rounded-xl w-[270px] h-[450px] "
         data-aos="fade-down"
         data-aos-delay={aosDelay}
       >
@@ -29,7 +29,9 @@ const ServicesCart: React.FC<ServicesCartProps> = ({
           height={450}
           className="rounded-xl"
         />
-        <div className="text-center mt-4 font-bold text-xl">{name}</div>
+        <div className="text-center mt-4 font-bold text-xl text-wrap">
+          {name}
+        </div>
       </div>
     </Link>
   );

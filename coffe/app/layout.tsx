@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Coffe",
@@ -17,10 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="app">
-        <Navbar />
-        <div className="mb-12">{children}</div>
-
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <div className="mb-12">{children}</div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 import { GiFoodTruck } from "react-icons/gi";
@@ -5,9 +6,12 @@ import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 
 const Banner = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <section>
-      <div className="bg-[url('/images/h1.jpg')] bg-center bg-no-repeat bg-cover h-full w-full font-sriracha">
+      <div
+        className={`font-sriracha ${theme === "dark" ? "bg-black" : "bg-img"}`}
+      >
         <div className="container">
           <div className="py-12 grid-cols-1 md:grid-cols-2 gap-6 grid">
             <div data-aos="zoom-in">

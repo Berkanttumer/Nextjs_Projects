@@ -13,6 +13,7 @@ import {
 import OrderButton from "../Button/OrderButton";
 import { FaCoffee } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
+import { ModeToggle } from "../DarkMode";
 
 const Navbar: React.FC = () => {
   return (
@@ -78,6 +79,9 @@ const Navbar: React.FC = () => {
             data-aos-delay="400"
             className="flex justify-center items-center gap-5 "
           >
+            <div>
+              <ModeToggle />
+            </div>
             <Link href="/account">
               <CgProfile className="text-2xl" />
             </Link>

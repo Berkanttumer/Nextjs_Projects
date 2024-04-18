@@ -7,6 +7,20 @@ body {
   overflow-x: hidden;
 }
 
+.bg-img {
+  background-image: url("/images/h1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.services-carts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+}
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -50,7 +64,7 @@ footer {
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0, 0%, 0%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -89,9 +103,6 @@ footer {
   }
   li:hover {
     @apply text-gray-700  duration-200 transition-all;
-  }
-  button {
-    @apply text-white;
   }
 }
 
