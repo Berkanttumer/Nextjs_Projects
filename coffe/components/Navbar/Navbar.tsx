@@ -15,7 +15,7 @@ import { FaCoffee } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { ModeToggle } from "../DarkMode";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   return (
     <div className="bg-secondaryText shadow-lg text-lightText">
       <div className="container py-3">
@@ -50,6 +50,24 @@ const Navbar: React.FC = () => {
                           </li>
                         );
                       })}
+                      <li>
+                        <Link
+                          href="/account"
+                          className="flex justify-center sm:hidden gap-3 items-center"
+                        >
+                          <CgProfile className="text-2xl" />
+                          Account
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/order"
+                          className="flex justify-center sm:hidden gap-3 items-center"
+                        >
+                          <FaCoffee />
+                          Order
+                        </Link>
+                      </li>
                     </ul>
                   </SheetDescription>
                 </SheetHeader>
@@ -77,19 +95,21 @@ const Navbar: React.FC = () => {
             data-aos="fade-down"
             data-aos-once="true"
             data-aos-delay="400"
-            className="flex justify-center items-center gap-5 "
+            className="flex justify-center items-center gap-5"
           >
             <div>
               <ModeToggle />
             </div>
-            <Link href="/account">
+            <Link href="/account" className="hidden sm:block">
               <CgProfile className="text-2xl" />
             </Link>
-            <OrderButton
-              icon={FaCoffee}
-              label="Order"
-              onclick={() => {}}
-            ></OrderButton>
+            <Link href="/order" className="hidden sm:block">
+              <OrderButton
+                icon={FaCoffee}
+                label="Order"
+                onclick={() => {}}
+              ></OrderButton>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,10 +1,14 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { CiClock2 } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { IoMdMail } from "react-icons/io";
 
 const ContactPage = () => {
+  useEffect(() => {
+    console.log("SomePage rendered");
+  }, []);
   return (
     <section className="mt-12 font-sriracha">
       <div className="container">
@@ -51,8 +55,8 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-6 flex gap-5 justify-between">
-          <div>
+        <div className="mt-6 flex flex-col gap-5 justify-between lg:flex-row">
+          <div className="order-4 lg:order-1 ">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385396.3210483094!2d28.68253373686614!3d41.00537021828283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1709661161881!5m2!1str!2str"
               width="600"
@@ -61,26 +65,26 @@ const ContactPage = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="w-full">
-            <form className="flex flex-col gap-5">
+          <div className="w-full order-3">
+            <form className="flex flex-col gap-5 ">
               <div>
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="py-3 px-6 rounded-xl text-xl w-2/3"
+                  className="py-3 px-6 rounded-xl text-xl w-full lg:w-full xl:w-2/3"
                 />
               </div>
               <div>
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="py-3 px-6 rounded-xl text-xl w-2/3"
+                  className="py-3 px-6 rounded-xl text-xl w-full lg:w-full xl:w-2/3"
                 />
               </div>
               <div>
                 <textarea
                   rows={5}
-                  className="py-3 px-6 rounded-xl text-xl w-2/3"
+                  className="py-3 px-6 rounded-xl text-xl w-full lg:w-full xl:w-2/3"
                   placeholder="Your message"
                 ></textarea>
               </div>
