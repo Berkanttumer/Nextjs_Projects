@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="app">
+    <div>
       <Hero />
       <Services />
       <Banner />

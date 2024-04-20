@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -14,8 +15,10 @@ import OrderButton from "../Button/OrderButton";
 import { FaCoffee } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { ModeToggle } from "../DarkMode";
+import { useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
+  const { user } = useUser();
   return (
     <div className="bg-secondaryText shadow-lg text-lightText">
       <div className="container py-3">
@@ -100,8 +103,23 @@ const Navbar = () => {
             <div>
               <ModeToggle />
             </div>
-            <Link href="/account" className="hidden sm:block">
-              <CgProfile className="text-2xl" />
+            <Link
+              href="/account"
+              className="hidden sm:flex items-center justify-center gap-2 hover:opacity-55"
+            >
+              {user?.imageUrl ? (
+                <div
+                  style={{
+                    backgroundImage: `url(${user.imageUrl})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="rounded-full w-6 h-6"
+                />
+              ) : (
+                <CgProfile className="text-2xl" />
+              )}
+              <p>{user?.username}</p>
             </Link>
             <Link href="/order" className="hidden sm:block">
               <OrderButton
