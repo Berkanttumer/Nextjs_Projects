@@ -15,7 +15,7 @@ import OrderButton from "../Button/OrderButton";
 import { FaCoffee } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { ModeToggle } from "../DarkMode";
-import { useUser } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
   const { user } = useUser();
@@ -105,22 +105,17 @@ const Navbar = () => {
             </div>
             <Link
               href="/account"
-              className="hidden sm:flex items-center justify-center gap-2 hover:opacity-55"
+              className="hidden sm:flex items-center justify-center gap-2 hover:opacity-55 "
             >
-              {user?.imageUrl ? (
-                <div
-                  style={{
-                    backgroundImage: `url(${user.imageUrl})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                  className="rounded-full w-6 h-6"
-                />
+              {user ? (
+                <div className="userbutton flex items-center">
+                  <UserButton userProfileUrl="/account" showName />
+                </div>
               ) : (
                 <CgProfile className="text-2xl" />
               )}
-              <p>{user?.username}</p>
             </Link>
+
             <Link href="/order" className="hidden sm:block">
               <OrderButton
                 icon={FaCoffee}

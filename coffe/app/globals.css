@@ -7,6 +7,12 @@ body {
   overflow-x: hidden;
 }
 
+.userbutton > div > button > * {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+}
 .bg-img {
   background-image: url("/images/h1.jpg");
   background-position: center;
