@@ -26,6 +26,10 @@ const UserSchema = new Schema({
   lastName: {
     type: String,
   },
+  orderHistory: {
+    type: Array,
+    default: [],
+  },
 });
 
 const User = models?.User || model("User", UserSchema);
