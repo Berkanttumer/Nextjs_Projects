@@ -20,17 +20,6 @@ const AccountPage = () => {
     }
   }, [user, router]);
 
-  const CustomPage = () => {
-    return (
-      <div>
-        <h1 className="text-xl font-bold text-center mb-5">
-          Your coffe order history
-        </h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    );
-  };
-
   return (
     <section>
       <div className="container">

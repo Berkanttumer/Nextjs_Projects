@@ -11,7 +11,7 @@ export function AccordionDemo() {
   const { theme, setTheme } = useTheme();
   return (
     <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1 ">
+      <AccordionItem value="item-1">
         <AccordionTrigger>
           What is the difference between Arabica and Robusta coffee beans?
         </AccordionTrigger>
@@ -27,8 +27,7 @@ export function AccordionDemo() {
         <AccordionTrigger>How should I store my coffee?</AccordionTrigger>
         <AccordionContent>
           Coffee should be stored in a cool, dry place. Avoid exposure to light,
-          heat, and moisture. It's best to store coffee in an airtight
-          container.
+          heat, and moisture. Its best to store coffee in an airtight container.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
