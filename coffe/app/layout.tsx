@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import AdminPage from "./admin/page";
 
 export const metadata: Metadata = {
   title: "Coffe",
@@ -15,6 +18,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const router = useRouter();
+
+  if (router.pathname.includes("/admin")) {
+    return <AdminPage />;
+  }
+
   return (
     <ClerkProvider
       appearance={{
